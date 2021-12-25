@@ -12,7 +12,7 @@ function Contact() {
     const connectY = useTransform(scrollYProgress, [0.85, 1], [0, -200]);
     const controls = useAnimation();
     const iconPulse = {
-        hidden: { borderColor: "#EDF2F7", color: "white", transform: "none", boxShadow: "0 0 0 0 rgba(246, 173, 85, 0)" },
+        hidden: { borderColor: "#EDF2F7", color: "white", transform: "scale(1)", boxShadow: "0 0 0 0 rgba(246, 173, 85, 0)" },
         show: { 
             borderColor: ["#F6AD55", "#F6AD55"], 
             color: "#2C5282",
