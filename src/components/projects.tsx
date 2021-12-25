@@ -39,7 +39,7 @@ const comboChild = (children: JSX.Element) => {
 };
 
 const githubIcon = () => <FontAwesomeIcon icon={faGithub} size="lg" />
-const toolText = (text: string) => <Text mt="6px" color="orange.400" fontSize={["8px", "12px"]} fontWeight="bold" lineHeight={["8px", "12px"]} whiteSpace="pre-line">{text}</Text>
+const toolText = (text: string) => <Text mt="6px" color="orange.400" fontSize={["10px", "12px"]} fontWeight="semibold" lineHeight={["10px", "12px"]} whiteSpace="pre-line">{text}</Text>
 
 
 
@@ -60,7 +60,7 @@ function Projects() {
                     <MotionBox w={["85%", "450px", "600px"]} m={["auto", null, "unset"]} p="20px" 
                     bgColor="white" rounded="lg" position="relative"
                     initial={{ scale: 0.5 }} whileInView={projectInView} viewport={{ once: true }}>
-                        <Flex fontSize="20px" fontWeight="black" justifyContent="space-between">
+                        <Flex fontSize="20px" fontWeight="extrabold" justifyContent="space-between">
                             <Text pl={[null, "20px"]}>Carb Cycling Planner</Text>
                             <MotionBox whileHover={{ scale: 1.2 }}>
                                 <Box as="a" target="_blank" href="https://github.com/MegaPanda/carb-cycling-planner" cursor="pointer">
@@ -79,7 +79,7 @@ function Projects() {
                                 </Box>
                             </MotionBox>
                             <Box>
-                                <Text w={["240px", "360px", "250px"]} fontSize={["12px", "14px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
+                                <Text w={["240px", "360px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
                                     A web app for easy planning and tracking your carb cycling diet. Calculate your TDEE,
                                     set up your goal, and choose between high-mid-low carb to know your daily targeting 
                                     micros. Search or simply create your own food data to keep your diet diary on track.
@@ -123,8 +123,8 @@ function Projects() {
                     <MotionBox w={["85%", "450px", "600px"]} m={["auto", null, "unset"]} p="20px" 
                     bgColor="white" rounded="lg" alignSelf="end" position="relative"
                     initial={{ scale: 0.5 }} whileInView={projectInView} viewport={{ once: true }}>
-                        <Flex fontSize="20px" fontWeight="black" justifyContent="space-between">
-                            <Text pl={["20px", "100px", "20px"]}>Panda the Trumpeter</Text>
+                        <Flex fontSize="20px" fontWeight="extrabold" justifyContent="space-between">
+                            <Text pl={[null, "20px"]}>Panda the Trumpeter</Text>
                             <MotionBox whileHover={{ scale: 1.2 }}>
                                 <Box as="a" target="_blank" href="-------" cursor="pointer">
                                     {githubIcon()}
@@ -142,7 +142,7 @@ function Projects() {
                                 </Box>
                             </MotionBox>
                             <Box>
-                                <Text w={["240px", "360px", "250px"]} fontSize={["12px", "14px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
+                                <Text w={["240px", "360px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
                                     A web app for easy planning and tracking your carb cycling diet. Calculate your TDEE,
                                     set up your goal, and choose between high-mid-low carb to know your daily targeting 
                                     micros. Search or simply create your own food data to keep your diet diary on track.
@@ -178,7 +178,7 @@ function Projects() {
                     <MotionBox w={["85%", "450px", "600px"]} m={["auto", null, "unset"]} p="20px" 
                     bgColor="white" rounded="lg" position="relative"
                     initial={{ scale: 0.5 }} whileInView={projectInView} viewport={{ once: true }}>
-                        <Flex fontSize="20px" fontWeight="black" justifyContent="space-between">
+                        <Flex fontSize="20px" fontWeight="extrabold" justifyContent="space-between">
                             <Text pl={[null, "20px"]}>Fluffy T-Shirt Shop</Text>
                             <MotionBox whileHover={{ scale: 1.2 }}>
                                 <Box as="a" target="_blank" href="https://github.com/MegaPanda/react-shopping-site" cursor="pointer">
@@ -197,7 +197,7 @@ function Projects() {
                                 </Box>
                             </MotionBox>
                             <Box>
-                                <Text w={["240px", "300px", "250px"]} fontSize={["12px", "14px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
+                                <Text w={["240px", "300px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
                                     Fluffy T-Shirt Shop is a single-page, user-friendly shopping website built with 
                                     TypeScript and React. It's fully responsive with the help of the utility-first
                                     CSS framework Tailwind. Firebase's Realtime Database is deployed for data-fetching

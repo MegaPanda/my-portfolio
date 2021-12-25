@@ -74,7 +74,7 @@ function Contact() {
                         <MotionBox as="span" animate={controls} variants={connectText}>Connect.</MotionBox>    
                     </Box>
                 </MotionBox>
-                
+                {/* lyrics popup */}
                 <MotionBox w="100%" maxW="480px" roundedTop="3xl" bgColor="gray.800" color="white"
                 pt="40px" fontSize={["24px", "30px"]} position="relative" overflow="hidden"
                 _after={{

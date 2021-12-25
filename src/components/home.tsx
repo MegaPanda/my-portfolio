@@ -13,7 +13,7 @@ function Home() {
                 <Box pl={[5, 16]} >
                     <MotionBox opacity={0} animate={{ opacity: 1, transition: { duration: 2 } }}>
                         <Text as="span" fontSize={32} fontFamily="'Noto Serif TC', serif" fontWeight="bold">馬偉倫</Text>
-                        <Text as="span" fontSize={16} fontWeight="semibold" pl={4}>/mǎ, wěi lún/</Text>
+                        <Text as="span" fontSize={16} pl={4}>/mǎ, wěi lún/</Text>
                         <Text as="span" fontSize={16} fontWeight="bold" fontStyle="italic" pl={4}>n.</Text>
                     </MotionBox>
                     <MotionBox pl={1} opacity={0} animate={{ opacity: 1, transition: { duration: 2 } }}>
@@ -28,7 +28,7 @@ function Home() {
                 <MotionBox position="absolute" top="0" right={["16px", "26px"]} w="30px" zIndex={-2} bgColor="gray.800" 
                 h="0" animate={{ height: "20%", transition: { delay: 1, duration: 1 } }}/>
                 <Box position="absolute" bottom="190px" right={["-45px", "-60px"]} zIndex={-1} sx={{ writingMode: "vertical-lr" }}>
-                    <Text fontSize={["90px", "120px"]} fontWeight="bold" color="gray.300">Research.</Text>
+                    <Text fontSize={["90px", "120px"]} fontWeight="semibold" color="gray.300">Research.</Text>
                 </Box>
             </Box>
         </Box>
