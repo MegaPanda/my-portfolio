@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
-import carbCyclingPlanner from "../images/carb-cycling-planner.jpg";
-import fluffyShop from "../images/fluffy-shop.jpg"
 
 const MotionBox = motion<BoxProps>(Box);
 
@@ -71,7 +69,7 @@ function Projects() {
                         <Flex py="20px" direction={["column", null, "row"]} gap={["20px", null, "40px"]} justifyContent="center" alignItems="center">
                             <MotionBox whileHover={{ scale: 1.1 }} position="relative">
                                 <Box as="a" target="_blank" href="https://carb-cycling-planner.web.app" cursor="pointer">
-                                    <Image src={carbCyclingPlanner} alt="Carb Cycling Planner"
+                                    <Image src="/carb-cycling-planner.jpg" alt="Carb Cycling Planner"
                                     boxSize={["240px", "300px", "250px"]} objectFit="cover" objectPosition="center top" 
                                     border="2px solid #CBD5E0" borderRadius="md" />
                                     <FontAwesomeIcon icon={faExternalLinkAlt} color="#4A5568" size="lg"
@@ -134,7 +132,7 @@ function Projects() {
                         <Flex py="20px" direction={["column", null, "row"]} gap={["20px",null, "40px"]} justifyContent="center" alignItems="center">
                             <MotionBox whileHover={{ scale: 1.1 }} position="relative">
                                 <Box as="a" target="_blank" href="-------" cursor="pointer">
-                                    <Image src={carbCyclingPlanner} alt="Carb Cycling Planner"
+                                    <Image src="/carb-cycling-planner.jpg" alt="Carb Cycling Planner"
                                     boxSize={["240px", "300px", "250px"]} objectFit="cover" objectPosition="center top" 
                                     border="2px solid #CBD5E0" borderRadius="md" />
                                     <FontAwesomeIcon icon={faExternalLinkAlt} color="#4A5568" size="lg"
@@ -189,7 +187,7 @@ function Projects() {
                         <Flex py="20px" direction={["column", null, "row"]} gap={["20px", null, "40px"]} justifyContent="center" alignItems="center">
                             <MotionBox whileHover={{ scale: 1.1 }} position="relative">
                                 <Box as="a" target="_blank" href="https://megapanda.github.io/react-shopping-site/" cursor="pointer">
-                                    <Image src={fluffyShop} alt="Fluffy T-shirt Shop"
+                                    <Image src="/fluffy-shop.jpg" alt="Fluffy T-shirt Shop"
                                     boxSize={["240px", "300px", "250px"]} objectFit="cover" objectPosition="center top" 
                                     border="2px solid #1A202C" borderRadius="md" />
                                     <FontAwesomeIcon icon={faExternalLinkAlt} color="white" size="lg"
