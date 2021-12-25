@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
-import carbCyclingPlanner from "./carb-cycling-planner.jpg";
-import fluffyShop from "./fluffy-shop.jpg"
+import carbCyclingPlanner from "../images/carb-cycling-planner.jpg";
+import fluffyShop from "../images/fluffy-shop.jpg"
 
 const MotionBox = motion<BoxProps>(Box);
 
