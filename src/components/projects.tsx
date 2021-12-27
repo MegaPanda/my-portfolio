@@ -6,58 +6,54 @@ import { motion } from "framer-motion";
 
 const MotionBox = motion<BoxProps>(Box);
 
-const comboButton = (color: string, text: string, rotate?: string) => {
-    return (
-        <Flex w="24px" h="24px" rounded="full" m="auto" bgColor={color} fontFamily="'Press Start 2P', cursive">
-            <Box w="13px" h="14px" m="auto" color="gray.50" fontSize="14px" fontWeight="bold" transform={rotate ? rotate : "none"}>{text}</Box>
-        </Flex>
-    )
-};
-const aButton = comboButton("red.600", "A");
-const bButton = comboButton("yellow.400", "B");
-const xButton = comboButton("blue.500", "X");
-const yButton = comboButton("green.600", "Y");
-const upButton = comboButton("black", "↑");
-const downButton = comboButton("black", "↓");
-const leftButton = comboButton("black", "↓", "rotate(90deg)");
-const rightButton = comboButton("black", "↑", "rotate(90deg)");
-
-const comboContainer = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { staggerChildren: 0.2 } }
-};
-const combo = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transform: ["scale(0.95)", "scale(1.2)", "scale(1)"] }
-};
-const comboChild = (children: JSX.Element) => {
-    return (
-        <MotionBox variants={combo}>{children}</MotionBox>
-    )
-};
-
-const githubIcon = () => <FontAwesomeIcon icon={faGithub} size="lg" />
-const toolText = (text: string) => <Text mt="6px" color="orange.400" fontSize={["10px", "12px"]} fontWeight="semibold" lineHeight={["10px", "12px"]} whiteSpace="pre-line">{text}</Text>
-
-
-
-
 function Projects() {
-    const projectInView = { scale: 1, transition: { delay: 0.2 } };
+    const comboButton = (color: string, text: string, rotate?: string) => {
+        return (
+            <Flex w="24px" h="24px" rounded="full" m="auto" bgColor={color} fontFamily="'Press Start 2P', cursive">
+                <Box w="13px" h="14px" m="auto" color="gray.50" fontSize="14px" fontWeight="bold" transform={rotate ? rotate : "none"}>{text}</Box>
+            </Flex>
+        )
+    };
+    const aButton = comboButton("red.600", "A");
+    const bButton = comboButton("yellow.400", "B");
+    const xButton = comboButton("blue.500", "X");
+    const yButton = comboButton("green.600", "Y");
+    const upButton = comboButton("black", "↑");
+    const downButton = comboButton("black", "↓");
+    const leftButton = comboButton("black", "↓", "rotate(90deg)");
+    const rightButton = comboButton("black", "↑", "rotate(90deg)");
+    const comboChild = (children: JSX.Element) => {
+        return (
+            <MotionBox variants={combo}>{children}</MotionBox>
+        )
+    };
+    const githubIcon = () => <FontAwesomeIcon icon={faGithub} size="lg" />
+    const comboText = (text: string) => <Text mt="6px" color="orange.400" fontSize={["10px", "12px"]} fontWeight="semibold" lineHeight={["10px", "12px"]} whiteSpace="pre-line">{text}</Text>
+    
+    const comboContainer = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1, transition: { staggerChildren: 0.2 } }
+    };
+    const combo = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1, transform: ["scale(5)", "scale(1.2)", "scale(1)"], transition: { duration: 0.1 } }
+    };
+    const projectInView = { scale: 1, transition: { delay: 0.2, type: "spring", bounce: 0.5 } };
+    
 
     return (
         <Box w="100%" minH="100vh" bgColor="gray.700" position="relative" overflow="hidden">
-            <Box w="100%" maxW="1024px" m="auto" pt="80px" position="relative">
+            <Box w="100%" maxW="1024px" m="auto" pt="80px" pb={["120px", "150px"]} position="relative">
                 <Box>
                     <Text py="10px" fontFamily="'Press Start 2P', cursive"
-                    fontSize={["30px", "42px", "64px"]} fontWeight="extrabold" color="cyan.100">PLAYGROUND.</Text>
+                    fontSize={["29px", "42px", "64px"]} fontWeight="extrabold" color="cyan.100">PLAYGROUND.</Text>
                 </Box>
                 <Flex px={[null, null, "20px"]} direction="column" gap="60px">
 
                     {/* project no.1 */}
                     <MotionBox w={["85%", "450px", "600px"]} m={["auto", null, "unset"]} p="20px" 
                     bgColor="white" rounded="lg" position="relative"
-                    initial={{ scale: 0.5 }} whileInView={projectInView} viewport={{ once: true }}>
+                    initial={{ scale: 0.7 }} whileInView={projectInView} viewport={{ once: true }}>
                         <Flex fontSize="20px" fontWeight="extrabold" justifyContent="space-between">
                             <Text pl={[null, "20px"]}>Carb Cycling Planner</Text>
                             <MotionBox whileHover={{ scale: 1.2 }}>
@@ -77,7 +73,7 @@ function Projects() {
                                 </Box>
                             </MotionBox>
                             <Box>
-                                <Text w={["240px", "360px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
+                                <Text w={["240px", "320px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
                                     A web app for easy planning and tracking your carb cycling diet. Calculate your TDEE,
                                     set up your goal, and choose between high-mid-low carb to know your daily targeting 
                                     micros. Search or simply create your own food data to keep your diet diary on track.
@@ -85,34 +81,34 @@ function Projects() {
                                 </Text>
                             </Box>
                         </Flex>
-                        <Flex justifyContent="center" textAlign="center" lineHeight="none">
-                            <Box w={["45px", "60px", "80px"]}>
+                        <Flex gap={["8px", "20px", "40px"]} justifyContent="center" textAlign="center" lineHeight="none">
+                            <Box>
                                 {downButton}
-                                {toolText("Type\nScript")}
+                                {comboText("Type\nScript")}
                             </Box>
-                            <Box w={["45px", "60px", "80px"]}>
+                            <Box>
                                 {downButton}
-                                {toolText("React")}
+                                {comboText("React")}
                             </Box>
-                            <Box w={["45px", "60px", "80px"]}>
+                            <Box>
                                 {comboButton("black", "↓", "rotate(45deg)")}
-                                {toolText("Redux")}
+                                {comboText("Redux")}
                             </Box>
-                            <Box w={["45px", "65px", "80px"]}>
+                            <Box>
                                 {leftButton}
-                                {toolText("React \n Router")}
+                                {comboText("React \n Router")}
                             </Box>
-                            <Box w={["50px", "70px", "80px"]}>
+                            <Box>
                                 {yButton}
-                                {toolText("styled \n com-\nponents")}
+                                {comboText("styled \n com-\nponents")}
                             </Box>
-                            <Box w={["50px", "70px", "80px"]}>
+                            <Box>
                                 {yButton}
-                                {toolText("Firebase \n Auth.")}
+                                {comboText("Firebase \n Auth.")}
                             </Box>
-                            <Box w={["45px", "60px", "80px"]}>
+                            <Box>
                                 {xButton}
-                                {toolText("Fire\nstore")}
+                                {comboText("Fire\nstore")}
                             </Box>
                         </Flex>
                     </MotionBox>
@@ -120,7 +116,7 @@ function Projects() {
                     {/* project no.2 */}
                     <MotionBox w={["85%", "450px", "600px"]} m={["auto", null, "unset"]} p="20px" 
                     bgColor="white" rounded="lg" alignSelf="end" position="relative"
-                    initial={{ scale: 0.5 }} whileInView={projectInView} viewport={{ once: true }}>
+                    initial={{ scale: 0.7 }} whileInView={projectInView} viewport={{ once: true }}>
                         <Flex fontSize="20px" fontWeight="extrabold" justifyContent="space-between">
                             <Text pl={[null, "20px"]}>Panda the Trumpeter</Text>
                             <MotionBox whileHover={{ scale: 1.2 }}>
@@ -140,34 +136,33 @@ function Projects() {
                                 </Box>
                             </MotionBox>
                             <Box>
-                                <Text w={["240px", "360px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
-                                    A web app for easy planning and tracking your carb cycling diet. Calculate your TDEE,
-                                    set up your goal, and choose between high-mid-low carb to know your daily targeting 
-                                    micros. Search or simply create your own food data to keep your diet diary on track.
-                                    The app will automatically calculate the consumed calories and visualize your progress.
+                                <Text w={["240px", "320px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
+                                    Inspired by Google Arts &amp; Culture's Blob Opera, this small, fun interactive piece  
+                                    is built with Three.js for 3D animation and Tone.js for web audio processing. The 3D
+                                    panda model is created with Blender.
                                 </Text>
                             </Box>
                         </Flex>
-                        <Flex justifyContent={["center", null, "start"]} textAlign="center" lineHeight="none">
-                            <Box w={["50px", "65px", "80px"]}>
+                        <Flex gap={["20px", "30px", "40px"]} justifyContent="center" textAlign="center" lineHeight="none">
+                            <Box>
                                 {aButton}
-                                {toolText("Tone.js")}
+                                {comboText("Tone.js")}
                             </Box>
-                            <Box w={["50px", "65px", "80px"]}>
+                            <Box>
                                 {rightButton}
-                                {toolText("Java\nScript")}
+                                {comboText("Java\nScript")}
                             </Box>
-                            <Box w={["50px", "65px", "80px"]}>
+                            <Box>
                                 {rightButton}
-                                {toolText("React")}
+                                {comboText("React")}
                             </Box>
-                            <Box w={["50px", "65px", "80px"]}>
+                            <Box>
                                 {bButton}
-                                {toolText("React \n Three \n Fiber")}
+                                {comboText("React \n Three \n Fiber")}
                             </Box>
-                            <Box w={["50px", "65px", "80px"]}>
+                            <Box>
                                 {xButton}
-                                {toolText("Drei")}
+                                {comboText("Drei")}
                             </Box>
                         </Flex>
                     </MotionBox>
@@ -175,7 +170,7 @@ function Projects() {
                     {/* project no.3 */}
                     <MotionBox w={["85%", "450px", "600px"]} m={["auto", null, "unset"]} p="20px" 
                     bgColor="white" rounded="lg" position="relative"
-                    initial={{ scale: 0.5 }} whileInView={projectInView} viewport={{ once: true }}>
+                    initial={{ scale: 0.7 }} whileInView={projectInView} viewport={{ once: true }}>
                         <Flex fontSize="20px" fontWeight="extrabold" justifyContent="space-between">
                             <Text pl={[null, "20px"]}>Fluffy T-Shirt Shop</Text>
                             <MotionBox whileHover={{ scale: 1.2 }}>
@@ -195,43 +190,46 @@ function Projects() {
                                 </Box>
                             </MotionBox>
                             <Box>
-                                <Text w={["240px", "300px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
+                                <Text w={["240px", "320px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
                                     Fluffy T-Shirt Shop is a single-page, user-friendly shopping website built with 
-                                    TypeScript and React. It's fully responsive with the help of the utility-first
-                                    CSS framework Tailwind. Firebase's Realtime Database is deployed for data-fetching
-                                    and storing customers' order information.
+                                    TypeScript and React. It's fully responsive with the help of the CSS framework 
+                                    Tailwind. Firebase's Realtime Database is deployed for data-fetching and storing
+                                    customers' order information.
                                 </Text>
                             </Box>
                         </Flex>
-                        <Flex justifyContent={["center", null, "end"]} textAlign="center" lineHeight="none">
-                            <Box w={["50px", "65px", "80px"]}>
+                        <Flex gap={["8px", "20px", "40px"]} justifyContent="center" textAlign="center" lineHeight="none">
+                            <Box>
                                 {downButton}
-                                {toolText("Type\nScript")}
+                                {comboText("Type\nScript")}
                             </Box>
-                            <Box w={["50px", "65px", "80px"]}>
+                            <Box>
                                 {comboButton("black", "↑", "rotate(135deg)")}
-                                {toolText("React")}
+                                {comboText("React")}
                             </Box>
-                            <Box w={["50px", "65px", "80px"]}>
+                            <Box>
                                 {rightButton}
-                                {toolText("Redux")}
+                                {comboText("Redux")}
                             </Box>
-                            <Box w={["50px", "70px", "80px"]}>
+                            <Box>
                                 {comboButton("black", "↑", "rotate(45deg)")}
-                                {toolText("React \n Router")}
+                                {comboText("React \n Router")}
                             </Box>
-                            <Box w={["52px", "70px", "80px"]}>
+                            <Box>
                                 {upButton}
-                                {toolText("Tailwind")}
+                                {comboText("Tailwind")}
                             </Box>
-                            <Box w={["60px", "80px", "80px"]}>
+                            <Box>
                                 {aButton}
-                                {toolText("Firebase")}
+                                {comboText("Firebase")}
                             </Box>
                         </Flex>
                     </MotionBox>
                 </Flex>
-                <MotionBox display="flex" m="auto" pt="120px" pb={["120px"]} lineHeight="none" 
+                {/* section divider */}
+                <Box height={["120px", "150px"]} />
+                {/* konami cheat code */}
+                <MotionBox display="flex" m="auto" lineHeight="none" 
                 transform={["scale(1.5)", "scale(2)", "scale(2.5)"]} justifyContent="center" gap={{ md: "8px" }}
                 variants={comboContainer} initial="hidden" whileInView="show" viewport={{ once: true }}
                 >
@@ -247,6 +245,8 @@ function Projects() {
                     {comboChild(aButton)}
                 </MotionBox>
             </Box>
+
+            {/* direction pad */}
             <Box w="40px" h="40px" position="absolute" left="calc(50% - 20px)" bottom="40px" bgColor="gray.800" rounded="lg" />
             <Box w="60px" h="30px" position="absolute" left="calc(50% - 60px)" bottom="10px" bgColor="gray.800" rounded="lg" />
             <Box w="60px" h="30px" position="absolute" left="calc(50%)" bottom="10px" bgColor="gray.800" rounded="lg" />

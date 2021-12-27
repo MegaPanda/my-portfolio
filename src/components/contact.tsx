@@ -22,7 +22,7 @@ function Contact() {
         }
     };
     const connectText = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0, transition: { duration: 0.1 } },
         show: { opacity: 1 }
     };
     const lyricsPopup = {
@@ -30,7 +30,7 @@ function Contact() {
         show: { height: "40%" }
     };
     const lyricsBox = {
-        show: { translateY: ["130%", "-100%"], transition: { repeat: Infinity, duration: 8 } }
+        show: { translateY: ["180%", "-100%"], transition: { repeat: Infinity, duration: 8 } }
     };
     
     useEffect(() => {
@@ -55,11 +55,11 @@ function Contact() {
             display="flex" gap="46px" alignItems="center" justifyContent="center"
             animate={controls} variants={iconPulse}
             >
-                <Box as="a" target="_blank" href="mailto:weilunma@gmail.com" cursor="pointer">
-                    <FontAwesomeIcon icon={faEnvelopeSquare} size="7x" />
+                <Box as="a" target="_blank" href="mailto:weilunma@gmail.com" fontSize={["70px"]} cursor="pointer">
+                    <FontAwesomeIcon icon={faEnvelopeSquare} />
                 </Box>
-                <Box as="a" target="_blank" href="https://www.linkedin.com/in/weilunma/" cursor="pointer">
-                    <FontAwesomeIcon icon={faLinkedin} size="7x" />
+                <Box as="a" target="_blank" href="https://www.linkedin.com/in/weilunma/" fontSize={["70px"]} cursor="pointer">
+                    <FontAwesomeIcon icon={faLinkedin} />
                 </Box>
             </MotionBox>
             {/* keypad down */}
@@ -76,17 +76,17 @@ function Contact() {
                 </MotionBox>
                 {/* lyrics popup */}
                 <MotionBox w="100%" maxW="480px" roundedTop="3xl" bgColor="gray.800" color="white"
-                pt="40px" fontSize={["24px", "30px"]} position="relative" overflow="hidden"
+                fontSize={["24px", "30px"]} position="relative" overflow="hidden"
                 _after={{
                     content: `""`,
-                    position: "absolute",
+                    position: "absolute",  // pseudo element for fading the text //
                     top: 0,
                     width: "100%",
                     height: "100%",
                     background: "linear-gradient(180deg, rgba(26,32,44,1) 10%, rgba(26,32,44,0) 35%, rgba(26,32,44,0) 70%, rgba(26,32,44,1) 90%)",
                 }}
                 animate={controls} variants={lyricsPopup}>
-                    <MotionBox zIndex={10} w={["250px", "320px"]} m="auto" animate={controls} variants={lyricsBox} >
+                    <MotionBox zIndex={10} w={["250px", "320px"]} m="auto" animate={controls} variants={lyricsBox}>
                         <MotionBox >Hey, I just met you,</MotionBox>
                         <MotionBox >no, it's not crazy</MotionBox>
                         <MotionBox >And here's my handles,</MotionBox>
