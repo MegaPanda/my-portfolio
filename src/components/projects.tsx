@@ -181,7 +181,7 @@ function Projects() {
                         </Flex>
                         <Flex py="20px" direction={["column", null, "row"]} gap={["20px", null, "40px"]} justifyContent="center" alignItems="center">
                             <MotionBox whileHover={{ scale: 1.1 }} position="relative">
-                                <Box as="a" target="_blank" href="https://megapanda.github.io/react-shopping-site/" cursor="pointer">
+                                <Box as="a" target="_blank" href="https://megapanda.github.io/fluffy-tshirt-shop/" cursor="pointer">
                                     <Image src="/fluffy-shop.jpg" alt="Fluffy T-shirt Shop"
                                     boxSize={["240px", "300px", "250px"]} objectFit="cover" objectPosition="center top" 
                                     border="2px solid #1A202C" borderRadius="md" />
