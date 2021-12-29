@@ -118,20 +118,20 @@ function Projects() {
                     bgColor="white" rounded="lg" alignSelf="end" position="relative"
                     initial={{ scale: 0.7 }} whileInView={projectInView} viewport={{ once: true }}>
                         <Flex fontSize="20px" fontWeight="extrabold" justifyContent="space-between">
-                            <Text pl={[null, "20px"]}>Panda the Trumpeter</Text>
+                            <Text pl={[null, "20px"]}>Synthing Panda</Text>
                             <MotionBox whileHover={{ scale: 1.2 }}>
-                                <Box as="a" target="_blank" href="-------" cursor="pointer">
+                                <Box as="a" target="_blank" href="https://github.com/MegaPanda/synthing-panda" cursor="pointer">
                                     {githubIcon()}
                                 </Box>
                             </MotionBox>
                         </Flex>
                         <Flex py="20px" direction={["column", null, "row"]} gap={["20px",null, "40px"]} justifyContent="center" alignItems="center">
                             <MotionBox whileHover={{ scale: 1.1 }} position="relative">
-                                <Box as="a" target="_blank" href="-------" cursor="pointer">
-                                    <Image src="/carb-cycling-planner.jpg" alt="Carb Cycling Planner"
+                                <Box as="a" target="_blank" href="https://synthing-panda.netlify.app/" cursor="pointer">
+                                    <Image src="/synthing-panda.jpg" alt="Synthing Panda"
                                     boxSize={["240px", "300px", "250px"]} objectFit="cover" objectPosition="center top" 
                                     border="2px solid #CBD5E0" borderRadius="md" />
-                                    <FontAwesomeIcon icon={faExternalLinkAlt} color="#4A5568" size="lg"
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} color="white" size="lg"
                                     style={{ position: "absolute", bottom: "10px", right: "10px" }}/>
                                 </Box>
                             </MotionBox>
@@ -174,7 +174,7 @@ function Projects() {
                         <Flex fontSize="20px" fontWeight="extrabold" justifyContent="space-between">
                             <Text pl={[null, "20px"]}>Fluffy T-Shirt Shop</Text>
                             <MotionBox whileHover={{ scale: 1.2 }}>
-                                <Box as="a" target="_blank" href="https://github.com/MegaPanda/react-shopping-site" cursor="pointer">
+                                <Box as="a" target="_blank" href="https://github.com/MegaPanda/fluffy-tshirt-shop" cursor="pointer">
                                     {githubIcon()}
                                 </Box>
                             </MotionBox>
