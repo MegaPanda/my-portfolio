@@ -40,7 +40,7 @@ function About() {
                         <Text>&#9679; Firebase</Text>
                     </Grid>
                     <Text pt="32px" pb="8px" fontSize="20px" fontWeight="extrabold">RECIPE:</Text>
-                    <Grid gap={4} px="8px" fontSize="16px" fontWeight={400} textAlign="justify" >
+                    <Grid gap={4} px="8px" fontSize={["14px", "16px"]} fontWeight={400} textAlign="justify" >
                         <Text>
                             I'm a passionate linguist currently polishing my newly pots and pans - programming 
                             languages. After years of marinating in IT translation, including tech specs, 
