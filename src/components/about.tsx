@@ -28,36 +28,36 @@ function About() {
                     <Text fontSize="30px" fontWeight="black" lineHeight="6">
                         ARTISAN TOP-SHELF COPPER-BOTTOMED WEILUN-Y FRONT-END BABY WIZARD
                     </Text>
-                    <Text pt="32px" pb="8px" fontSize={16} fontWeight="extrabold">INGREDIENTS:</Text>
+                    <Text pt="32px" pb="8px" fontSize="20px" fontWeight="extrabold">INGREDIENTS:</Text>
                     <Grid templateColumns="repeat(2, 1fr)" gap={2} px="8px" fontSize={14}>
                         <Text>&#9679; JavaScript</Text>
                         <Text>&#9679; TypeScript</Text>
                         <Text>&#9679; React</Text>
-                        <Text>&#9679; Redux/RTK</Text>
+                        <Text>&#9679; Redux</Text>
                         <Text>&#9679; React Router</Text>
                         <Text>&#9679; Tailwind</Text>
                         <Text>&#9679; styled components</Text>
                         <Text>&#9679; Firebase</Text>
                     </Grid>
-                    <Text pt="32px" pb="8px" fontSize={16} fontWeight="extrabold">INSTRUCTIONS:</Text>
-                    <Grid templateColumns="repeat(1, 1fr)" gap={4} px="8px" fontSize={14} textAlign="justify" lineHeight="5">
+                    <Text pt="32px" pb="8px" fontSize="20px" fontWeight="extrabold">RECIPE:</Text>
+                    <Grid gap={4} px="8px" fontSize="16px" fontWeight={400} textAlign="justify" >
                         <Text>
-                            1. Marinate <Text as="span" fontStyle="italic">WEILUN</Text> in tech translation for three years.
+                            I'm a passionate linguist currently polishing my newly pots and pans - programming 
+                            languages. After years of marinating in IT translation, including tech specs, 
+                            game localization and UI/UX features, I'm now baking the computer scripts to 
+                            the visualization of user interface. 
                         </Text>
                         <Text>
-                            2. Turn on the VS Code, toss in the finely cured <Text as="span" fontWeight="bold">TypeScript</Text> on top of <Text as="span" fontWeight="bold">JavaScript</Text>.
+                            My crafting specialty is front-end development, particularly the combination of 
+                            <strong> React's ecosystem </strong>with <strong>TypeScript</strong>. I have a 
+                            keen eye to intuitive, user-friendly web design thanks to my previous works in 
+                            the UI/UX fields, and being a translator allows me to brew the essence of story-
+                            telling into plating compelling visual experience.
                         </Text>
                         <Text>
-                            3. Mix <Text as="span" fontWeight="bold">React</Text> with slices of <Text as="span" fontWeight="bold">Redux</Text> and wrap them with <Text as="span" fontWeight="bold">React Router</Text>.
-                        </Text>
-                        <Text>
-                            4. Vigorously combine everything with Google and StackOverflow.
-                        </Text>
-                        <Text>
-                            5. Season with <Text as="span" fontWeight="bold">Tailwind</Text> and <Text as="span" fontWeight="bold">styled components</Text>.
-                        </Text>
-                        <Text>
-                            6. Place it on <Text as="span" fontWeight="bold">Firebase</Text> and <Text as="span" fontStyle="italic">WEILUN</Text> is ready for npm run build!
+                            As a gourmet of words and narratives, and a gamer at heart, I'm dedicated to 
+                            creating accessible, fun and interactive digital experiences with a chef's kiss
+                            to visual features. 
                         </Text>
                     </Grid>
                 </MotionBox>
