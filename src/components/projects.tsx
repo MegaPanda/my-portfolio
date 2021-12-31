@@ -73,7 +73,7 @@ function Projects() {
                                 </Box>
                             </MotionBox>
                             <Box>
-                                <Text w={["240px", "320px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
+                                <Text w={["240px", "320px", "250px"]} fontSize="16px" textAlign="justify" fontWeight="medium" lineHeight="short">
                                     A web app for easy planning and tracking your carb cycling diet. Calculate your TDEE,
                                     set up your goal, and choose between high-mid-low carb to know your daily targeting 
                                     micros. Search or simply create your own food data to keep your diet diary on track.
