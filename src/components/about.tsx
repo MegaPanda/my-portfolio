@@ -55,7 +55,7 @@ function About() {
                             telling into plating compelling visual experience.
                         </Text>
                         <Text>
-                            As a gourmet of words and narratives, and a gamer at heart, I'm dedicated to 
+                            As a gourmet of words and narratives, plus a gamer at heart, I'm dedicated to 
                             creating accessible, fun and interactive digital experiences with a chef's kiss
                             to visual features. 
                         </Text>
