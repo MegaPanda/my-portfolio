@@ -73,7 +73,7 @@ function Projects() {
                                 </Box>
                             </MotionBox>
                             <Box>
-                                <Text w={["240px", "320px", "250px"]} fontSize="16px" textAlign="justify" fontWeight="medium" lineHeight="short">
+                                <Text w={["240px", "320px", "250px"]} fontSize="16px" textAlign="justify" fontWeight={400} lineHeight="short">
                                     A web app for easy planning and tracking your carb cycling diet. Calculate your TDEE,
                                     set up your goal, and choose between high-mid-low carb to know your daily targeting 
                                     micros. Search or simply create your own food data to keep your diet diary on track.
@@ -136,7 +136,7 @@ function Projects() {
                                 </Box>
                             </MotionBox>
                             <Box>
-                                <Text w={["240px", "320px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
+                                <Text w={["240px", "320px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight={400} lineHeight="short">
                                     Inspired by Google Arts &amp; Culture's Blob Opera, this small, fun, interactive piece  
                                     is built with Three.js for 3D animation and Tone.js for web audio processing. The 3D
                                     panda model is created with Blender.
@@ -190,7 +190,7 @@ function Projects() {
                                 </Box>
                             </MotionBox>
                             <Box>
-                                <Text w={["240px", "320px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight="medium" lineHeight="short">
+                                <Text w={["240px", "320px", "250px"]} fontSize={["14px", "16px"]} textAlign="justify" fontWeight={400} lineHeight="short">
                                     Fluffy T-Shirt Shop is a single-page, user-friendly shopping website built with 
                                     TypeScript and React. It's fully responsive with the help of the CSS framework 
                                     Tailwind. Firebase Realtime Database is deployed for data-fetching and storing
