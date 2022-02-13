@@ -22,7 +22,7 @@ function About() {
                 </MotionBox>
                 
                 <MotionBox zIndex={10} w="300px" p="30px 20px" ml="auto" mb="80px" bgColor="white" rounded="lg" boxShadow="md"
-                initial={{ translateX: "150px" }} whileInView={{ translateX: 0, transition: { duration: 0.5 } }}
+                initial={{ translateX: "150px", opacity: 0 }} whileInView={{ translateX: 0, opacity: 1, transition: { duration: 0.5 } }}
                 viewport={{ once: true }}
                 >
                     <Text fontSize="30px" fontWeight="black" lineHeight="6">
@@ -42,21 +42,21 @@ function About() {
                     <Text pt="32px" pb="8px" fontSize="20px" fontWeight="extrabold">RECIPE:</Text>
                     <Grid gap={4} px="8px" fontSize="16px" fontWeight={400} textAlign="justify" >
                         <Text>
-                            I'm a passionate linguist currently polishing my new pots and pans - programming 
+                            I&apos;m a passionate linguist currently polishing my new pots and pans - programming 
                             languages. After years of marinating in IT translation, including tech specs, 
-                            game localization and UI/UX features, I'm now baking the computer scripts to 
+                            game localization and UI/UX features, I&apos;m now baking the computer scripts to 
                             the visualization of user interface. 
                         </Text>
                         <Text>
                             My crafting specialty is front-end development, particularly the combination of 
-                            <strong> React's ecosystem </strong>with <strong>TypeScript</strong>. I have a 
+                            <strong> React&apos;s ecosystem </strong>with <strong>TypeScript</strong>. I have a 
                             keen eye for intuitive, user-friendly web design thanks to my previous works in 
                             the UI/UX fields, and being a translator allows me to brew the essence of story-
                             telling into plating compelling visual experience.
                         </Text>
                         <Text>
-                            As a gourmet of words and narratives, plus a gamer at heart, I'm dedicated to 
-                            creating accessible, fun and interactive digital experiences with a chef's kiss
+                            As a gourmet of words and narratives, plus a gamer at heart, I&apos;m dedicated to 
+                            creating accessible, fun and interactive digital experiences with a chef&apos;s kiss
                             to visual features. 
                         </Text>
                     </Grid>

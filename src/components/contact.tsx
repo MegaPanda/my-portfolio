@@ -88,8 +88,8 @@ function Contact() {
                 animate={controls} variants={lyricsPopup}>
                     <MotionBox zIndex={10} w={["250px", "320px"]} m="auto" animate={controls} variants={lyricsBox}>
                         <MotionBox >Hey, I just met you,</MotionBox>
-                        <MotionBox >no, it's not crazy</MotionBox>
-                        <MotionBox >And here's my handles,</MotionBox>
+                        <MotionBox >no, it&apos;s not crazy</MotionBox>
+                        <MotionBox >And here&apos;s my handles,</MotionBox>
                         <MotionBox >so write me maybe!</MotionBox>
                     </MotionBox>
                 </MotionBox>
