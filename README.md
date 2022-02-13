@@ -6,7 +6,7 @@ https://weilunma.dev/
 
 ## Built with
 - TypeScript
-- React
+- Next.js
 - Chakra UI
 - Framer Motion
  
