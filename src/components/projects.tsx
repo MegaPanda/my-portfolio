@@ -43,7 +43,7 @@ function Projects() {
 
     return (
         <Box w="100%" minH="100vh" bgColor="gray.700" position="relative" overflow="hidden">
-            <Box w="100%" maxW="1024px" m="auto" pt="80px" pb={["120px", "150px"]} position="relative">
+            <Box w="100%" maxW="1024px" m="auto" pt="40px" pb={["120px", "150px"]} position="relative">
                 <Box>
                     <Text py="10px" fontFamily="'Press Start 2P', cursive"
                     fontSize={["29px", "42px", "64px"]} fontWeight="extrabold" color="cyan.100">PLAYGROUND.</Text>

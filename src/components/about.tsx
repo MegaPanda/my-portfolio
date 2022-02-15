@@ -5,13 +5,13 @@ const MotionBox = motion<BoxProps>(Box);
 
 function About() {
     return (
-        <Box w="100%" pt="80px" bg="linear-gradient(180deg, #2D3748 30%, white 30%)">
-            <MotionBox maxW="1024px" m="auto" display="flex" flexDirection="column" pr={["0px", "10px", "40px"]} position="relative"
+        <Box w="100%" pt="80px" bg="linear-gradient(180deg, #2D3748 30%, white 30%, white 95%, #2D3748 95%)">
+            <MotionBox maxW="1024px" m="auto" display="flex" flexDirection="column" pr={["0px", "10px", "40px"]} pb="80px" position="relative"
             initial={{ overflow: "hidden" }}  whileInView={{ overflow: "visible", transition: { delay: 0.5, duration: 0.1 } }}
             viewport={{ once: true }}
             >
                 
-                <MotionBox position="absolute" bottom="-20px" right={["240px", "250px", "280px"]}
+                <MotionBox position="absolute" bottom="35px" right={["240px", "250px", "280px"]}
                 sx={{ writingMode: "vertical-rl" }}
                 fontSize="150px" fontWeight="bold" letterSpacing="-8px" color="orange.400" zIndex={8}
                 initial={{ rotate: "180deg", opacity: 0, translateY: "200px" }}
@@ -61,7 +61,7 @@ function About() {
                         </Text>
                     </Grid>
                 </MotionBox>
-                <Image src="/weilunma.jpg" alt="Wei-Lun Ma" position="absolute" zIndex={20} right="20px" bottom="-30px"
+                <Image src="/weilunma.jpg" alt="Wei-Lun Ma" position="absolute" zIndex={20} right="20px" bottom="30px"
                 boxSize="150px" rounded="full"
                 />
             </MotionBox>
